@@ -1,0 +1,6 @@
+# app-ads.txt for Squeeze Out! (Spacerunners Inc.) - served at https://denizozzgur.github.io/app-ads.txt
+# The developer website in App Store Connect and Play Console must be https://denizozzgur.github.io
+# Owner: confirm this is the Spacerunners AdMob publisher ID (AdMob > Settings > Account information).
+google.com, pub-7229597443648324, DIRECT, f08c47fec0942fa0
+# Mediation partners (13+ only): paste each network's lines from its dashboard before launch
+# (AppLovin, Unity Ads, Liftoff/Vungle, Mintegral). Their seller IDs are account-specific.

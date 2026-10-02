@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": [
+          "XC9452WG3S.com.spacerunners.squeezeout"
+        ],
+        "components": [
+          {
+            "/": "/open/*",
+            "comment": "Deep links from Custom Product Pages and In-App Events"
+          },
+          {
+            "/": "/c/*",
+            "comment": "Free my jelly challenge links"
+          }
+        ]
+      }
+    ]
+  }
+}
