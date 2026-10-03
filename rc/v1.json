@@ -1,0 +1,30 @@
+{
+  "v": 1,
+  "updated": "2026-10-03",
+  "note": "Squeeze Out! remote config v1 (1.0.1+). Mirrors the build defaults; the app validates every value and can only make ads lighter. Kill switches: reviews.enabled=false, ads.interDailyCap=0, econ.rescueDailyCap=0, ab.* back to control. Never put client-bucketed cells (ab.att, ab.shopOrder) here unless you mean to pin every install. See docs/monetization-tuning-plan.md §9.3.",
+  "econ": {
+    "winTutorial": 10, "winEasy": 15, "winNormal": 20, "winHardConf": 25, "winHard": 40, "winSuper": 80,
+    "starBonus": 5, "welcomeGift": 300,
+    "levelChest": 100, "chapterChest": 250, "starChest": 100,
+    "dailyJam": 50, "passFreePerDay": 25, "doubleDropsFrom": 8, "doubleDropsDailyCap": 8,
+    "continue0": 800, "continue1": 1400, "continue2": 2200, "continuesPerAttempt": 3, "continue1Booster": false,
+    "rescuePackDrops": 2500, "rescueDailyCap": 3, "rescueVariant": "a",
+    "tintPrice": 1500, "dailyJarDrops": 40, "firstPurchaseMultiplier": 2,
+    "starterFrom": 12, "starterWindowH": 72, "starterStruggleFrom": 15, "starterMinSessions": 2,
+    "chapterKitWindowH": 48, "offerQuietMin": 10,
+    "repeatPayerUsd": 10, "whaleUsd": 100, "whaleWindowDays": 7, "whaleQuietDays": 7,
+    "dropJar": { "enabled": true, "share": 1, "cap": 3000, "breakAt": 1000 },
+    "boosterPrices": { "slapOut": 600, "time": 300, "squeeze": 400, "shield": 300 }
+  },
+  "ads": {
+    "interFrom": 16, "interEveryWins": 3, "interMinGapSec": 150, "interSessionGraceSec": 120,
+    "interDailyCap": 12, "interSessionCap": 5, "afterRewardedSec": 150, "shopQuietSec": 180,
+    "purchaseGraceDays": 7, "storeQuietMin": 10, "skipAfterRetryWin": true,
+    "rwBoostOn": true, "rwBoostAfterFails": 2, "rwBoostDailyCap": 3, "rwJarInShop": true
+  },
+  "ab": { "rescue": "a", "dropJar": "on", "starter": "struggle_s2", "hearts": "off", "continueBoost": "off", "rwBoost": "on" },
+  "reviews": { "enabled": true },
+  "game": { "timerFailTiers": ["hard", "superhard", "event"] },
+  "growth": { "challenge": false },
+  "levels": {}
+}
