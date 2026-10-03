@@ -25,6 +25,5 @@
   "ab": { "rescue": "a", "dropJar": "on", "starter": "struggle_s2", "hearts": "off", "continueBoost": "off", "rwBoost": "on" },
   "reviews": { "enabled": true },
   "game": { "timerFailTiers": ["hard", "superhard", "event"] },
-  "growth": { "challenge": false },
-  "levels": {}
+  "growth": { "challenge": false }
 }
