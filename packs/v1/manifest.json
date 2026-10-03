@@ -1,0 +1,41 @@
+{
+  "v": 1,
+  "updatedAt": "2026-10-03T12:12:32.924Z",
+  "packs": [
+    {
+      "id": "ch7",
+      "title": "Jelly Fair",
+      "from": 121,
+      "to": 170,
+      "count": 50,
+      "schema": 2,
+      "minApp": "1.0.0",
+      "url": "ch7.json",
+      "sha256": "0435a58cdff229262ad7b2666973a224c600276520119a2ea5e00ace9e46e949",
+      "bytes": 199051,
+      "chapters": [
+        {
+          "n": 7,
+          "name": "Jelly Fair",
+          "theme": "food",
+          "from": 121,
+          "to": 140
+        },
+        {
+          "n": 8,
+          "name": "Night Market",
+          "theme": "weird",
+          "from": 141,
+          "to": 160
+        },
+        {
+          "n": 9,
+          "name": "Snow Globe",
+          "theme": "ocean",
+          "from": 161,
+          "to": 170
+        }
+      ]
+    }
+  ]
+}

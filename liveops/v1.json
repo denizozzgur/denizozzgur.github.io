@@ -1,0 +1,869 @@
+{
+ "v": 1,
+ "rev": 1,
+ "events": [
+  {
+   "id": "fever",
+   "type": "fever_ladder",
+   "title": "Jelly Fever Ladder",
+   "blurb": "Win in a row to climb. A loss only slips one step.",
+   "recur": {
+    "every": "week",
+    "day": 2,
+    "at": "16:00",
+    "hours": 72
+   },
+   "minLevel": 12,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ],
+    "firstClearOnly": true
+   },
+   "rules": {
+    "steps": 7,
+    "dropOnFail": 1
+   },
+   "milestones": [
+    {
+     "at": 1,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 25
+      }
+     ]
+    },
+    {
+     "at": 2,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 40
+      }
+     ]
+    },
+    {
+     "at": 3,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 4,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 75
+      }
+     ]
+    },
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 6,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 120
+      }
+     ]
+    },
+    {
+     "at": 7,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 400
+      },
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fever-weekend",
+   "type": "fever_ladder",
+   "title": "Jelly Fever Ladder",
+   "blurb": "Win in a row to climb. A loss only slips one step.",
+   "recur": {
+    "every": "week",
+    "day": 5,
+    "at": "16:00",
+    "hours": 72
+   },
+   "minLevel": 12,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ],
+    "firstClearOnly": true
+   },
+   "rules": {
+    "steps": 7,
+    "dropOnFail": 1
+   },
+   "milestones": [
+    {
+     "at": 1,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 25
+      }
+     ]
+    },
+    {
+     "at": 2,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 40
+      }
+     ]
+    },
+    {
+     "at": 3,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 4,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 75
+      }
+     ]
+    },
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 6,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 120
+      }
+     ]
+    },
+    {
+     "at": 7,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 400
+      },
+      {
+       "kind": "cosmetic",
+       "id": "tint:honey",
+       "orDrops": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jam-week",
+   "type": "daily_jam",
+   "title": "Jam Week",
+   "blurb": "Finish the Daily Jam on different days this week.",
+   "recur": {
+    "every": "week",
+    "day": 1,
+    "at": "00:00",
+    "hours": 168
+   },
+   "minLevel": 25,
+   "milestones": [
+    {
+     "at": 1,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 30
+      }
+     ]
+    },
+    {
+     "at": 3,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 150
+      },
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "missions",
+   "type": "weekly_missions",
+   "title": "Weekly Missions",
+   "blurb": "Five missions, three rewards. New ones every Monday.",
+   "recur": {
+    "every": "week",
+    "day": 1,
+    "at": "00:00",
+    "hours": 168
+   },
+   "minLevel": 8
+  },
+  {
+   "id": "launch-sprint-2026",
+   "type": "counter",
+   "title": "Launch Week Sprint",
+   "blurb": "Win levels this week. Every win counts, old or new.",
+   "start": "2026-10-13T16:00:00Z",
+   "end": "2026-10-19T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "win"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 15,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 200
+      },
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jelly-hunt-2026-10",
+   "type": "counter",
+   "title": "Jelly Hunt",
+   "blurb": "Clear levels you have never beaten before.",
+   "start": "2026-10-20T16:00:00Z",
+   "end": "2026-10-26T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "first_clear"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 12,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 25,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spooky-squeeze-2026",
+   "type": "counter",
+   "title": "Spooky Squeeze",
+   "blurb": "Halloween week: squeeze jellies through tight gates.",
+   "start": "2026-10-27T16:00:00Z",
+   "end": "2026-11-02T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "squeeze"
+   },
+   "milestones": [
+    {
+     "at": 10,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 60
+      }
+     ]
+    },
+    {
+     "at": 25,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 50,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      },
+      {
+       "kind": "cosmetic",
+       "id": "tint:ink",
+       "orDrops": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "star-hunt-2026-11",
+   "type": "counter",
+   "title": "Star Hunt",
+   "blurb": "Earn 3 stars. Replays count too.",
+   "start": "2026-11-03T16:00:00Z",
+   "end": "2026-11-09T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack"
+    ]
+   },
+   "rules": {
+    "metric": "three_star"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 15,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hard-hat-2026-11",
+   "type": "counter",
+   "title": "Hard Hat Weekend",
+   "blurb": "Beat Hard and Super Hard levels this weekend.",
+   "start": "2026-11-13T16:00:00Z",
+   "end": "2026-11-16T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack"
+    ]
+   },
+   "rules": {
+    "metric": "hard_win"
+   },
+   "milestones": [
+    {
+     "at": 1,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 60
+      }
+     ]
+    },
+    {
+     "at": 3,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 6,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 300
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gate-rush-2026-11",
+   "type": "counter",
+   "title": "Gate Rush",
+   "blurb": "Squeeze 30 jellies through gates this week.",
+   "start": "2026-11-17T16:00:00Z",
+   "end": "2026-11-23T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "squeeze"
+   },
+   "milestones": [
+    {
+     "at": 8,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 18,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "harvest-feast-2026",
+   "type": "counter",
+   "title": "Harvest Feast",
+   "blurb": "Thanksgiving week: collect stars, new or improved.",
+   "start": "2026-11-24T16:00:00Z",
+   "end": "2026-11-30T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack"
+    ]
+   },
+   "rules": {
+    "metric": "stars"
+   },
+   "milestones": [
+    {
+     "at": 10,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 60
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 60,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 300
+      },
+      {
+       "kind": "cosmetic",
+       "id": "tint:honey",
+       "orDrops": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "jelly-hunt-2026-12",
+   "type": "counter",
+   "title": "Jelly Hunt",
+   "blurb": "New levels landed: clear ones you have never beaten.",
+   "start": "2026-12-01T16:00:00Z",
+   "end": "2026-12-07T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "first_clear"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 12,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 25,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "snow-day-sprint-2026",
+   "type": "counter",
+   "title": "Snow Day Sprint",
+   "blurb": "Win levels this week. Every win counts, old or new.",
+   "start": "2026-12-08T16:00:00Z",
+   "end": "2026-12-14T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "win"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 15,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "holiday-lights-2026",
+   "type": "counter",
+   "title": "Holiday Lights",
+   "blurb": "Light up the season with 3-star wins. Replays count.",
+   "start": "2026-12-15T16:00:00Z",
+   "end": "2026-12-21T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack"
+    ]
+   },
+   "rules": {
+    "metric": "three_star"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 15,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      },
+      {
+       "kind": "cosmetic",
+       "id": "tint:frost",
+       "orDrops": 150
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cocoa-countdown-2026",
+   "type": "counter",
+   "title": "Cocoa Countdown",
+   "blurb": "Holiday week: every win counts, old or new.",
+   "start": "2026-12-22T16:00:00Z",
+   "end": "2026-12-28T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "win"
+   },
+   "milestones": [
+    {
+     "at": 7,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 60
+      }
+     ]
+    },
+    {
+     "at": 20,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 40,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 400
+      },
+      {
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 2
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "new-year-stars-2026",
+   "type": "counter",
+   "title": "New Year Stars",
+   "blurb": "Finish the year with stars, new or improved.",
+   "start": "2026-12-29T16:00:00Z",
+   "end": "2027-01-04T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack"
+    ]
+   },
+   "rules": {
+    "metric": "stars"
+   },
+   "milestones": [
+    {
+     "at": 10,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 60
+      }
+     ]
+    },
+    {
+     "at": 30,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "time",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 60,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 300
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
