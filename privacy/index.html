@@ -13,7 +13,8 @@
 </head>
 <body>
 <!-- Owner: have a US privacy lawyer review this page before launch (COPPA, CCPA/CPRA and other state laws). Fill every yellow placeholder.
-     Section 11 (regional sections, 2026-10-03) also needs local review before relying on it: Brazil, Canada/Quebec, Mexico, Argentina, Colombia, Chile, Peru, Philippines, Singapore, Malaysia, Australia, New Zealand (see docs/privacy-gdpr-draft.md "Owner / legal actions"). -->
+     Section 11 (regional sections, 2026-10-03) also needs local review before relying on it: Brazil, Canada/Quebec, Mexico, Argentina, Colombia, Chile, Peru, Philippines, Singapore, Malaysia, Australia, New Zealand (see docs/privacy-gdpr-draft.md "Owner / legal actions").
+     Canada / Brazil defaults and the Malay version of "Malaysia" added for 1.0.1 (2026-10-03); see docs/privacy-gdpr-draft.md "Canada and Brazil (1.0.1)". -->
 <a class="skip" href="#main">Skip to content</a>
 <header class="bar">
   <a class="brand" href="/"><img src="/assets/apple-touch-icon.png" alt="" width="38" height="38"><span>Squeeze Out!</span></a>
@@ -95,6 +96,7 @@
   </ul>
   <p>This is how we comply with the Children's Online Privacy Protection Act (COPPA): in kid-safe mode the game sends no analytics and no attribution data; the only third-party services it talks to are Google AdMob (child-directed, non-personalized ads) and, for purchases a grown-up approves, the app store and our purchase processor RevenueCat, which use a random purchase ID only to deliver and restore those purchases (support for the internal operations of the game). If you are a parent and believe your child gave us personal information, email <a href="mailto:deniz@spacerunners.com">deniz@spacerunners.com</a> and we will delete it.</p>
   <p><strong>Teens 13–15:</strong> we do not sell or share their personal information for cross-context behavioral advertising unless they opt in (on iPhone or iPad, by choosing "Allow" in Apple's tracking prompt). Otherwise they see non-personalized ads only.</p>
+  <p><strong>Canada and Brazil:</strong> stricter defaults apply there. In Canada, teens 13–15 never get personalized ads, and everyone else gets them only after opting in; in Brazil, nobody under 18 gets personalized ads. See <a href="#ca">Canada</a> and <a href="#br">Brazil</a> in section 11.</p>
 
   <h2 id="partners">5. Service providers and ad partners</h2>
   <p>We use these companies to run the game. Service providers process data only for us; ad partners also use data under their own privacy policies.</p>
@@ -116,7 +118,7 @@
   <ul>
     <li><strong>Tracking on iPhone and iPad:</strong> the game asks once, with Apple's App Tracking Transparency prompt. You can change it any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking. The game works the same either way.</li>
     <li><strong>Advertising ID on Android:</strong> you can reset or delete it in your device settings (Settings &gt; Google &gt; Ads, or Settings &gt; Privacy &gt; Ads).</li>
-    <li><strong>Personalized ads and data sharing:</strong> use the in-game switch described in <a href="#do-not-sell">section 7</a>. The switch works wherever you live.</li>
+    <li><strong>Personalized ads and data sharing:</strong> use the in-game switch described in <a href="#do-not-sell">section 7</a>. The switch works wherever you live. In Canada, personalized ads are off until you turn them on (see <a href="#ca">section 11, Canada</a>).</li>
     <li><strong>No ads:</strong> the optional one-time "No Ads" purchase removes interstitial ads. Rewarded videos stay optional.</li>
     <li><strong>Notifications:</strong> the game asks before sending reminders, and you can turn them off in your device settings.</li>
     <li><strong>Deleting data:</strong> see <a href="/delete-data/">denizozzgur.github.io/delete-data</a>.</li>
@@ -171,9 +173,9 @@
   <p>Questions or requests: <a href="mailto:deniz@spacerunners.com">deniz@spacerunners.com</a> &middot; Space Runners Inc. (App Store, web) &middot; Evercopy Inc. (Google Play)</p>
 
   <h2 id="regions">11. If you live outside the United States</h2>
-  <p>The game works the same way in every country: the same data, the same partners, the same kid-safe mode and the same in-game choices described above. This section adds what the privacy laws of the following countries require us to tell you. If something here differs from sections 1 to 10, this section applies to people in that country.</p>
+  <p>The game works the same way in every country: the same data, the same partners, the same kid-safe mode and the same in-game choices described above, except for the stricter advertising defaults in Canada and Brazil described below. This section adds what the privacy laws of the following countries require us to tell you. If something here differs from sections 1 to 10, this section applies to people in that country.</p>
   <ul class="toc">
-    <li><a href="#br">Brazil</a> &middot; <a href="#ca">Canada</a> &middot; <a href="#au">Australia</a> &middot; <a href="#nz">New Zealand</a> &middot; <a href="#mx">Mexico</a> &middot; <a href="#ar">Argentina</a> &middot; <a href="#co">Colombia</a> &middot; <a href="#cl">Chile</a> &middot; <a href="#pe">Peru</a> &middot; <a href="#ph">Philippines</a> &middot; <a href="#sg">Singapore</a> &middot; <a href="#my">Malaysia</a></li>
+    <li><a href="#br">Brazil</a> &middot; <a href="#ca">Canada</a> &middot; <a href="#au">Australia</a> &middot; <a href="#nz">New Zealand</a> &middot; <a href="#mx">Mexico</a> &middot; <a href="#ar">Argentina</a> &middot; <a href="#co">Colombia</a> &middot; <a href="#cl">Chile</a> &middot; <a href="#pe">Peru</a> &middot; <a href="#ph">Philippines</a> &middot; <a href="#sg">Singapore</a> &middot; <a href="#my">Malaysia</a> (<a href="#my-ms" lang="ms">Bahasa Melayu</a>)</li>
   </ul>
 
   <h3 id="intl-all">For everyone outside the United States</h3>
@@ -192,16 +194,26 @@
   <ul>
     <li><strong>Performance of a contract</strong> (art. 7, V): running the game you asked for, saving and delivering purchases, restoring them, and answering support requests.</li>
     <li><strong>Legitimate interest</strong> (art. 7, IX): gameplay analytics to fix bugs and improve the game, crash and performance data, fraud prevention, showing non-personalized ads that keep the game free, and measuring which of our ads led to installs. You can object at any time (email us or turn on the Do Not Sell or Share switch).</li>
-    <li><strong>Consent</strong> (art. 7, I): on iPhone and iPad, personalized ads, use of your device's advertising identifier and sending purchase events to Meta happen only if you choose "Allow" in Apple's tracking prompt. On Android, personalized ads rely on our legitimate interest, and you can turn them off at any time with the in-game switch. You can withdraw consent at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking.</li>
+    <li><strong>Consent</strong> (art. 7, I): for players 18 and over, on iPhone and iPad, personalized ads, use of your device's advertising identifier and sending purchase events to Meta happen only if you choose "Allow" in Apple's tracking prompt. On Android, personalized ads for players 18 and over rely on our legitimate interest, and you can turn them off at any time with the in-game switch. You can withdraw consent at any time in iOS Settings &gt; Privacy &amp; Security &gt; Tracking. Players under 18 never get personalized ads, whatever they choose (see below).</li>
     <li><strong>Legal obligation</strong> (art. 7, II) for tax and accounting records of purchases, and <strong>exercise of rights</strong> (art. 7, VI) where we need records for a legal claim.</li>
   </ul>
   <p><strong>Your rights</strong> (art. 18): confirmation that we process your data; access; correction of incomplete, inaccurate or out-of-date data; anonymization, blocking or deletion of unnecessary or excessive data; portability; deletion of data processed with your consent; information about the companies we share data with; information about the option not to consent and its consequences; and withdrawal of consent. You can also object to processing that does not comply with the LGPD. We do not make decisions about you based solely on automated processing. We answer requests to confirm or access your data within 15 days. You can also file a petition with the Autoridade Nacional de Prote&ccedil;&atilde;o de Dados (ANPD) at <a href="https://www.gov.br/anpd/">gov.br/anpd</a>.</p>
-  <p><strong>Children and adolescents</strong> (art. 14): we process their data in their best interest. Kid-safe mode (section 4) applies to every player who enters an age under 13, which includes all children under 12. Parents can contact our <em>encarregado</em> at any time.</p>
+  <p><strong>Children and adolescents</strong> (LGPD art. 14 and the Digital Statute of Children and Adolescents, Law No. 15,211/2025): we process their data in their best interest. Kid-safe mode (section 4) applies to every player who enters an age under 13, which includes all children under 12. For <strong>every player in Brazil under 18</strong>:</p>
+  <ul>
+    <li>ads are never personalized or based on a profile of the player: only non-personalized ads are shown, on iPhone, iPad and Android alike;</li>
+    <li>the device's advertising identifier is not used, install attribution (AppsFlyer) does not start, and no purchase events are sent to Meta;</li>
+    <li>Apple's tracking prompt is not shown, and choosing "Allow" in iOS Settings does not change any of this.</li>
+  </ul>
+  <p>Gameplay analytics (to fix bugs and balance levels) still work as described in section 2 for players 13 to 17, without any advertising use. Parents can contact our <em>encarregado</em> at any time.</p>
+  <p><strong>How the game knows you are in Brazil:</strong> from your mobile network or SIM country on Android, and otherwise from the region or language set on your device. If your device reports another country, that country's defaults apply; you can still turn off personalized ads with the Do Not Sell or Share switch.</p>
   <p><strong>International transfer</strong> (art. 33): your data is transferred to the United States and other countries where our providers operate, as needed to provide the game to you, with contractual safeguards such as standard contractual clauses where required.</p>
 
   <h3 id="ca">Canada (PIPEDA and provincial laws, including Quebec)</h3>
   <ul>
-    <li><strong>Consent:</strong> we use your information for the purposes in section 2 with your consent. Consent is express where it matters most (for example Apple's tracking prompt on iPhone and iPad) and implied for uses you would reasonably expect from a free mobile game, such as gameplay statistics and non-personalized ads. You can withdraw consent at any time, subject to legal or contractual limits: turn on Do Not Sell or Share, decline or change the tracking prompt, use Delete my data, or uninstall the game. Withdrawing does not change the game.</li>
+    <li><strong>Personalized ads are off by default.</strong> In Canada, personalized ads, use of your device's advertising identifier, install attribution (AppsFlyer) and sending purchase events to Meta are all off unless you turn them on. On iPhone and iPad you turn them on by choosing "Allow" in Apple's tracking prompt. On Android, the game asks you once, after the age screen, with two equal choices ("Keep ads general" or "Personalize ads"); you can change your answer at any time in Settings &gt; Privacy &gt; Personalized ads. Until you opt in, you see ads that are not based on your interests, and the game is the same either way.</li>
+    <li><strong>Teens 13 to 15:</strong> because Quebec law requires a parent's consent for a minor under 14 and the game can't tell which province you are in, players in Canada who enter an age of 13 to 15 never get personalized ads, attribution or Meta events, and are not asked. Kid-safe mode (section 4) applies under 13.</li>
+    <li><strong>How the game knows you are in Canada:</strong> from your mobile network or SIM country on Android, and otherwise from the region or language set on your device. If your device reports another country, that country's defaults apply; you can still turn off personalized ads with the Do Not Sell or Share switch or Apple's tracking settings.</li>
+    <li><strong>Consent:</strong> we use your information for the purposes in section 2 with your consent. Consent is express for personalized ads, attribution and Meta events (as described above) and implied for uses you would reasonably expect from a free mobile game, such as gameplay statistics and non-personalized ads. You can withdraw consent at any time, subject to legal or contractual limits: turn off Personalized ads, turn on Do Not Sell or Share, decline or change the tracking prompt, use Delete my data, or uninstall the game. Withdrawing does not change the game.</li>
     <li><strong>Privacy Officer:</strong> our Privacy Officer, who is also the person in charge of the protection of personal information for Quebec, can be reached at <a href="mailto:deniz@spacerunners.com">deniz@spacerunners.com</a>.</li>
     <li><strong>Access and correction:</strong> you can ask what information we hold about you, how it is used and to whom it was disclosed, and ask us to correct it. We answer within 30 days. In Quebec you can also ask us to stop disseminating your information, and to receive computerized data you provided in a structured, commonly used technological format.</li>
     <li><strong>Processing outside Canada:</strong> your information is stored and processed in the United States and other countries by us and our service providers, and may be accessible to courts, law enforcement and national security authorities there under their laws.</li>
@@ -291,6 +303,17 @@
     <li>Your data is transferred to the United States and other countries where our providers operate, with contractual safeguards.</li>
     <li>You can contact the Personal Data Protection Commissioner at <a href="https://www.pdp.gov.my/">pdp.gov.my</a>.</li>
   </ul>
+
+  <section lang="ms" aria-labelledby="my-ms">
+  <h3 id="my-ms">Malaysia (Akta Perlindungan Data Peribadi 2010) &middot; Bahasa Melayu</h3>
+  <p class="note"><span lang="en">Malay version of the "Malaysia (PDPA 2010)" section above.</span> Ini ialah versi Bahasa Melayu bagi bahagian &ldquo;Malaysia (PDPA 2010)&rdquo; di atas.</p>
+  <ul>
+    <li>Pegawai Perlindungan Data kami boleh dihubungi di <a href="mailto:deniz@spacerunners.com">deniz@spacerunners.com</a>.</li>
+    <li>Anda boleh meminta akses kepada dan pembetulan data peribadi anda (kami akan menjawab dalam tempoh 21 hari), menarik balik persetujuan anda, meminta kami menghentikan pemprosesan yang mungkin menyebabkan kerosakan atau distres kepada anda, dan meminta kami supaya tidak menggunakan data anda untuk tujuan pemasaran langsung. Anda tidak perlu memberikan sebarang data peribadi untuk bermain; pengecam yang diterangkan dalam seksyen 2 dicipta oleh permainan itu sendiri.</li>
+    <li>Data anda dipindahkan ke Amerika Syarikat dan negara lain tempat penyedia perkhidmatan kami beroperasi, dengan perlindungan melalui kontrak.</li>
+    <li>Anda boleh menghubungi Pesuruhjaya Perlindungan Data Peribadi di <a href="https://www.pdp.gov.my/">pdp.gov.my</a>.</li>
+  </ul>
+  </section>
 </main>
 
 <footer class="site">
