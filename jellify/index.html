@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jellify Anything: Turn any photo into jelly | Squeeze Out!</title>
+<meta name="description" content="Turn any photo into jelly. Your pet, your lunch, your toy: it becomes a glossy, wobbly jelly you can poke and slap, then share a vertical video clip. Free, no sign-up, and your photo never leaves your device.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; connect-src 'self' blob: data:; img-src 'self' blob: data:; media-src 'self' blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#ff7a1a">
+<link rel="canonical" href="https://denizozzgur.github.io/jellify/">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/Fredoka-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="jellify.css">
+<link rel="modulepreload" href="app.js">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Squeeze Out!">
+<meta property="og:title" content="Jellify Anything: turn any photo into jelly">
+<meta property="og:description" content="Your pet, your lunch, your toy: watch it turn into a glossy wobbly jelly, poke it, slap it and share the clip. Free, right in your browser.">
+<meta property="og:image" content="https://denizozzgur.github.io/jellify/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A kiwi slice turned into a glossy wobbling jelly, next to the words Turn any photo into jelly">
+<meta property="og:url" content="https://denizozzgur.github.io/jellify/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jellify Anything: turn any photo into jelly">
+<meta name="twitter:description" content="Your pet, your lunch, your toy: watch it wobble, poke it, slap it, share the clip. Free, in your browser, photo never uploaded.">
+<meta name="twitter:image" content="https://denizozzgur.github.io/jellify/og.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Jellify Anything","url":"https://denizozzgur.github.io/jellify/","description":"Turn any photo into a wobbly jelly you can poke and slap, then share a vertical video clip. Runs in your browser; photos are never uploaded.","applicationCategory":"EntertainmentApplication","operatingSystem":"Any (modern browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@type":"Organization","name":"Space Runners Inc."}}
+</script>
+<script type="module" src="app.js"></script>
+</head>
+<body class="jf">
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <a class="brand" href="/"><img src="/assets/apple-touch-icon.png" alt="" width="38" height="38"><span>Squeeze Out!</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="/jellify/" aria-current="page">Jellify</a>
+    <a href="/support/">Support</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="jf-hero" aria-labelledby="jf-title">
+    <div class="jf-copy">
+      <p class="jf-kicker">Free · no sign-up · works on your phone</p>
+      <h1 id="jf-title">Turn any photo into jelly</h1>
+      <p class="jf-lead">Your pet, your lunch, your toy. Drop it in and it becomes a glossy, wobbly jelly. Poke it, throw it, slap it, then share a clip.</p>
+    </div>
+
+    <div class="jf-stagewrap">
+      <div class="jf-stage" id="stage" aria-label="Jelly stage. Drag to throw, tap to poke, swipe to slap.">
+        <div class="jf-scene">
+          <canvas class="bg" aria-hidden="true"></canvas>
+          <canvas class="gl" aria-hidden="true"></canvas>
+          <canvas class="fx" aria-hidden="true"></canvas>
+        </div>
+        <div class="jf-hint" id="hint" aria-hidden="true">Tap to poke · drag to throw · swipe to slap</div>
+        <button class="jf-sound" id="soundBtn" type="button" aria-pressed="true" aria-label="Sound" title="Sound">
+            <svg class="on" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6.5 9H3.5v6h3L11 19z"/><path d="M15.5 9a4.5 4.5 0 0 1 0 6M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <svg class="off" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5L6.5 9H3.5v6h3L11 19z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg>
+          </button>
+        <div class="jf-rec" id="recBadge" hidden><i aria-hidden="true"></i><span>REC</span> <b id="recTime">0.0</b></div>
+        <div class="jf-busy" id="busy" hidden role="status" aria-live="polite">
+          <div class="jf-busy-card">
+            <span class="jf-spinner" aria-hidden="true"></span>
+            <strong id="busyLabel">Making jelly…</strong>
+            <span class="jf-bar" aria-hidden="true"><i id="busyBar"></i></span>
+            <small id="busyNote">Happens right here on your device.</small>
+          </div>
+        </div>
+        <div class="jf-pick" id="pick" hidden>
+          <img id="pickImg" alt="Your photo. Tap the thing you want to turn into jelly.">
+          <div class="jf-pick-top"><strong>Tap the thing to jellify</strong><button class="jf-x" id="pickCancel" type="button" aria-label="Cancel">✕</button></div>
+        </div>
+        <div class="jf-fatal" id="fatal" hidden role="alert"></div>
+      </div>
+    </div>
+
+    <div class="jf-controls">
+      <button class="btn jf-photo" id="photoBtn" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="15" height="14" rx="3.5"/><circle cx="7.5" cy="11" r="1.6"/><path d="M17.5 16.5l-4.2-4.2-8.3 7.7"/><path d="M20.5 2.5v6M17.5 5.5h6"/></svg>
+        Jellify a photo
+      </button>
+      <input id="file" type="file" accept="image/*" hidden>
+      <div class="jf-samples" id="samples" role="group" aria-label="Or try a sample"><span class="jf-or">or try</span></div>
+      <div class="jf-actions">
+        <button class="jf-act jf-clip" id="clipBtn" type="button" disabled><span class="jf-dot" aria-hidden="true"></span><span id="clipLabel">Make a clip</span></button>
+        <button class="jf-act" id="dropBtn" type="button" disabled title="Drop it again">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span>Drop</span>
+        </button>
+        <button class="jf-act" id="pokeBtn" type="button" disabled title="Poke it">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V4.5a1.5 1.5 0 0 1 3 0V10m0-1.5a1.5 1.5 0 0 1 3 0V11m0-1a1.5 1.5 0 0 1 3 0v4.5a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L3.6 14a1.5 1.5 0 0 1 2.4-1.8L9 15"/></svg><span>Poke</span>
+        </button>
+
+      </div>
+      <button class="jf-link" id="pickBtn" type="button" hidden>Wrong part of the photo? Tap it yourself</button>
+      <p class="jf-privacy"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8.5 10.5V8a3.5 3.5 0 0 1 7 0v2.5"/></svg>
+        <span><strong>Your photo never leaves your device.</strong> The background is removed right here in your browser. Nothing is uploaded, and there are no accounts, cookies or trackers.</span></p>
+      <p class="jf-rights">Only use photos you have the right to use. Please don't jellify other people without their OK.</p>
+    </div>
+  </section>
+
+  <section class="section band" aria-labelledby="how">
+    <div class="wrap">
+      <h2 id="how">How it works</h2>
+      <div class="grid jf-steps">
+        <article class="card"><div class="dot d1" aria-hidden="true">1</div><h3>Pick a photo</h3><p>Anything with a clear main subject works: a cat, a dog, a burger, a plush toy, a cactus.</p></article>
+        <article class="card"><div class="dot d2" aria-hidden="true">2</div><h3>Watch it wobble</h3><p>It is cut out on your device and dropped onto the table as real soft-body jelly. Tap, drag, throw and slap it.</p></article>
+        <article class="card"><div class="dot d3" aria-hidden="true">3</div><h3>Share the clip</h3><p>Tap Make a clip for a 9:16 video with sound, ready for Reels, TikTok, Shorts or your group chat.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="more">
+    <div class="wrap jf-promo">
+      <img src="/assets/icon-512.webp" alt="Squeeze Out! app icon: an orange jelly cat" width="512" height="512" loading="lazy">
+      <div>
+        <h2 id="more">Squish more in Squeeze Out!</h2>
+        <p>This is the same jelly engine that powers <strong>Squeeze Out!</strong>, a satisfying jelly jam puzzle: slide wobbly blocks to their gates and squeeze them through. Turn your own pet into a jelly in the app, too.</p>
+        <div class="badges" id="badges">
+          <a class="badge" id="playBadge" href="https://play.google.com/store/apps/details?id=com.spacerunners.squeezeout" rel="noopener" target="_blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3.5v17l14-8.5z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+            <span><small>Get it on</small>Google Play</span>
+          </a>
+          <a class="badge" id="iosBadge" href="#" aria-disabled="true" title="Coming soon to the App Store">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="1.5" width="14" height="21" rx="3.5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="18.5" r="1.3" fill="#fff"/></svg>
+            <span><small>Coming soon on the</small>App Store</span>
+          </a>
+        </div>
+        <p class="muted">Free to play. Contains ads and optional in-app purchases.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq">
+    <div class="wrap jf-faq">
+      <h2 id="faq">Questions</h2>
+      <details><summary>Is my photo uploaded anywhere?</summary><p>No. The photo is read by your browser, the background is removed by a small AI model that runs on your device (Google's MediaPipe MagicTouch, downloaded from this site the first time you jellify a photo), and the jelly is drawn on your screen. Nothing is sent to us or anyone else, and nothing about your image is logged.</p></details>
+      <details><summary>Which photos work best?</summary><p>One clear subject near the middle of the picture, not too small. If the wrong part of the photo turns into jelly, tap "Wrong part of the photo?" and tap the thing you want.</p></details>
+      <details><summary>Which browsers work?</summary><p>Recent Safari on iPhone and iPad, Chrome on Android, and Chrome, Edge, Firefox or Safari on a computer. Clips are saved as MP4 where the browser supports it (otherwise WebM). If your browser can't record video, you can save a picture instead.</p></details>
+      <details><summary>Can I use the clip?</summary><p>Yes, share it anywhere. Only use photos you have the right to use, and keep it kind.</p></details>
+    </div>
+  </section>
+</main>
+
+<div class="jf-result" id="result" hidden role="dialog" aria-modal="true" aria-labelledby="resultTitle">
+  <div class="jf-result-card">
+    <button class="jf-x" id="resultClose" type="button" aria-label="Close">✕</button>
+    <h2 id="resultTitle">Your jelly clip</h2>
+    <div class="jf-preview" id="preview"></div>
+    <div class="jf-result-actions">
+      <button class="btn" id="shareBtn" type="button" hidden>Share</button>
+      <a class="btn jf-ghost" id="saveBtn" href="#" download>Save</a>
+    </div>
+    <p class="note" id="resultNote">Made on your device. Nothing was uploaded.</p>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; 2026 Space Runners Inc. All rights reserved.<br><span class="muted jf-tm">Squeeze Out! is a trademark of Space Runners Inc. AI cutout: MediaPipe (Apache-2.0), see <a href="vendor/README.md">licenses</a>.</span></div>
+    <nav aria-label="Legal">
+      <a href="/">Squeeze Out!</a><a href="/support/">Support</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>
+    </nav>
+  </div>
+</footer>
+<noscript><p class="jf-noscript">Jellify Anything needs JavaScript to run the jelly engine.</p></noscript>
+</body>
+</html>
