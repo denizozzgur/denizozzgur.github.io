@@ -1,6 +1,6 @@
 {
  "v": 1,
- "rev": 2,
+ "rev": 3,
  "events": [
   {
    "id": "fever",
@@ -406,9 +406,9 @@
        "n": 250
       },
       {
-       "kind": "cosmetic",
-       "id": "tint:ink",
-       "orDrops": 150
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
       }
      ]
     }
