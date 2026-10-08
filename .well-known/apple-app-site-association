@@ -7,12 +7,20 @@
         ],
         "components": [
           {
-            "/": "/open/*",
-            "comment": "Deep links from Custom Product Pages and In-App Events"
+            "/": "/c/*",
+            "comment": "Challenge links: Can you solve level N? (/c/<level>?v=<variant>&m=<moves>)"
           },
           {
-            "/": "/c/*",
-            "comment": "Free my jelly challenge links"
+            "/": "/i/*",
+            "comment": "Free my jelly invites (opaque code, no personal data)"
+          },
+          {
+            "/": "/t/*",
+            "comment": "Referral thank-you links"
+          },
+          {
+            "/": "/open/*",
+            "comment": "Custom Product Page, In-App Event and Promotional Content deep links"
           }
         ]
       }

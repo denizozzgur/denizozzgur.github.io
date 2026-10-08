@@ -1,6 +1,6 @@
 {
  "v": 1,
- "rev": 3,
+ "rev": 4,
  "events": [
   {
    "id": "fever",
@@ -188,9 +188,9 @@
        "n": 400
       },
       {
-       "kind": "cosmetic",
-       "id": "tint:honey",
-       "orDrops": 150
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
       }
      ]
     }
@@ -557,8 +557,9 @@
        "n": 400
       },
       {
-       "kind": "cosmetic",
-       "id": "tint:blush"
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
       }
      ]
     }
@@ -609,9 +610,9 @@
        "n": 300
       },
       {
-       "kind": "cosmetic",
-       "id": "tint:honey",
-       "orDrops": 150
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
       }
      ]
     }
@@ -760,9 +761,9 @@
        "n": 250
       },
       {
-       "kind": "cosmetic",
-       "id": "tint:frost",
-       "orDrops": 150
+       "kind": "booster",
+       "id": "slapOut",
+       "n": 1
       }
      ]
     }

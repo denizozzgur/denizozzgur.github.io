@@ -1,7 +1,7 @@
 {
   "v": 1,
   "updated": "2026-10-03",
-  "note": "Squeeze Out! remote config v1 (1.0.1+). Mirrors the build defaults; the app validates every value and can only make ads lighter. Kill switches: reviews.enabled=false, ads.interDailyCap=0, econ.rescueDailyCap=0, ab.* back to control. Never put client-bucketed cells (ab.att, ab.shopOrder) here unless you mean to pin every install. See docs/monetization-tuning-plan.md §9.3.",
+  "note": "Squeeze Out! remote config v1 (1.0.1+). Mirrors the build defaults; the app validates every value and can only make ads lighter. Kill switches: reviews.enabled=false, delight.master=0 (feel layer back to 1.0), ads.interDailyCap=0, econ.rescueDailyCap=0, ab.* back to control. Never put client-bucketed cells (ab.att, ab.shopOrder) here unless you mean to pin every install. See docs/monetization-tuning-plan.md §9.3.",
   "econ": {
     "winTutorial": 10, "winEasy": 15, "winNormal": 20, "winHardConf": 25, "winHard": 40, "winSuper": 80,
     "starBonus": 5, "welcomeGift": 300,
@@ -25,5 +25,10 @@
   "ab": { "rescue": "a", "dropJar": "on", "starter": "struggle_s2", "hearts": "off", "continueBoost": "off", "rwBoost": "on" },
   "reviews": { "enabled": true },
   "game": { "timerFailTiers": ["hard", "superhard", "event"] },
-  "growth": { "challenge": false }
+  "growth": { "challenge": false },
+  "delight": {
+    "master": 1, "cheer": 1, "chainBadge": true, "lastPiece": true, "slowmo": 0.55, "slowmoMs": 180, "clearWave": true,
+    "music": true, "busyMax": 0.85, "idle": true, "idleEvery": 7, "praise": true, "firstWinToday": true,
+    "surprise": 0.04, "teaser": true, "mapFill": true
+  }
 }

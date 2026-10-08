@@ -1,10 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.spacerunners.squeezeout",
-      "sha256_cert_fingerprints": ["REPLACE_WITH_PLAY_APP_SIGNING_SHA256 (Play Console > Test and release > App integrity > App signing key certificate)"]
+      "sha256_cert_fingerprints": [
+        "3E:AF:30:CA:D2:83:DD:9C:86:9A:21:31:4A:72:01:A1:37:6A:7B:7E:37:88:78:61:20:47:15:8C:9C:B3:89:03",
+        "72:F7:44:39:C6:11:C1:3E:54:39:2A:ED:55:DE:BC:CE:19:35:33:AA:0D:F7:76:70:61:B9:60:24:14:39:1C:DA"
+      ]
     }
   }
 ]
