@@ -1,6 +1,6 @@
 {
  "v": 1,
- "rev": 1,
+ "rev": 2,
  "events": [
   {
    "id": "fever",
@@ -258,12 +258,61 @@
    "minLevel": 8
   },
   {
+   "id": "jelly-hunt-2026-10",
+   "type": "counter",
+   "title": "Jelly Hunt",
+   "blurb": "Clear levels you have never beaten before.",
+   "start": "2026-10-13T16:00:00Z",
+   "end": "2026-10-20T16:00:00Z",
+   "minLevel": 8,
+   "levels": {
+    "modes": [
+     "campaign",
+     "pack",
+     "daily"
+    ]
+   },
+   "rules": {
+    "metric": "first_clear"
+   },
+   "milestones": [
+    {
+     "at": 5,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 50
+      }
+     ]
+    },
+    {
+     "at": 12,
+     "items": [
+      {
+       "kind": "booster",
+       "id": "squeeze",
+       "n": 1
+      }
+     ]
+    },
+    {
+     "at": 25,
+     "items": [
+      {
+       "kind": "drops",
+       "n": 250
+      }
+     ]
+    }
+   ]
+  },
+  {
    "id": "launch-sprint-2026",
    "type": "counter",
    "title": "Launch Week Sprint",
    "blurb": "Win levels this week. Every win counts, old or new.",
-   "start": "2026-10-13T16:00:00Z",
-   "end": "2026-10-19T16:00:00Z",
+   "start": "2026-10-20T16:00:00Z",
+   "end": "2026-10-27T16:00:00Z",
    "minLevel": 8,
    "levels": {
     "modes": [
@@ -312,59 +361,10 @@
    ]
   },
   {
-   "id": "jelly-hunt-2026-10",
+   "id": "spooky-squish-2026",
    "type": "counter",
-   "title": "Jelly Hunt",
-   "blurb": "Clear levels you have never beaten before.",
-   "start": "2026-10-20T16:00:00Z",
-   "end": "2026-10-26T16:00:00Z",
-   "minLevel": 8,
-   "levels": {
-    "modes": [
-     "campaign",
-     "pack",
-     "daily"
-    ]
-   },
-   "rules": {
-    "metric": "first_clear"
-   },
-   "milestones": [
-    {
-     "at": 5,
-     "items": [
-      {
-       "kind": "drops",
-       "n": 50
-      }
-     ]
-    },
-    {
-     "at": 12,
-     "items": [
-      {
-       "kind": "booster",
-       "id": "squeeze",
-       "n": 1
-      }
-     ]
-    },
-    {
-     "at": 25,
-     "items": [
-      {
-       "kind": "drops",
-       "n": 250
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "id": "spooky-squeeze-2026",
-   "type": "counter",
-   "title": "Spooky Squeeze",
-   "blurb": "Halloween week: squeeze jellies through tight gates.",
+   "title": "Spooky Squish",
+   "blurb": "Halloween week: squeeze jellies through gates. Replays count.",
    "start": "2026-10-27T16:00:00Z",
    "end": "2026-11-02T16:00:00Z",
    "minLevel": 8,
@@ -511,39 +511,40 @@
    ]
   },
   {
-   "id": "gate-rush-2026-11",
+   "id": "jelly-fair-2026",
    "type": "counter",
-   "title": "Gate Rush",
-   "blurb": "Squeeze 30 jellies through gates this week.",
+   "title": "Jelly Fair Challenge",
+   "blurb": "Win levels 121-170 at the Jelly Fair and Night Market. Replays count.",
    "start": "2026-11-17T16:00:00Z",
    "end": "2026-11-23T16:00:00Z",
-   "minLevel": 8,
+   "minLevel": 100,
    "levels": {
+    "from": 121,
+    "to": 170,
     "modes": [
      "campaign",
-     "pack",
-     "daily"
+     "pack"
     ]
    },
    "rules": {
-    "metric": "squeeze"
+    "metric": "win"
    },
    "milestones": [
     {
-     "at": 8,
+     "at": 5,
      "items": [
       {
        "kind": "drops",
-       "n": 50
+       "n": 100
       }
      ]
     },
     {
-     "at": 18,
+     "at": 15,
      "items": [
       {
        "kind": "booster",
-       "id": "time",
+       "id": "squeeze",
        "n": 1
       }
      ]
@@ -553,7 +554,11 @@
      "items": [
       {
        "kind": "drops",
-       "n": 250
+       "n": 400
+      },
+      {
+       "kind": "cosmetic",
+       "id": "tint:blush"
       }
      ]
     }
@@ -616,7 +621,7 @@
    "id": "jelly-hunt-2026-12",
    "type": "counter",
    "title": "Jelly Hunt",
-   "blurb": "New levels landed: clear ones you have never beaten.",
+   "blurb": "Clear levels you have never beaten before.",
    "start": "2026-12-01T16:00:00Z",
    "end": "2026-12-07T16:00:00Z",
    "minLevel": 8,
