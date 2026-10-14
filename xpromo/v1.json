@@ -1,5 +1,5 @@
 {
-  "_doc": "Cross-promotion between Spacerunners apps (owner's own apps only). Read by DomDom Pop, Vidalo and Sky Says. Rules: never a full-screen interstitial, never a reward for installing, only where the host app's age rating covers the promoted app (DomDom iOS 4+ never shows the 9+ Squeeze Out!), soft card at most once per softEveryDays after a positive moment, always dismissible, permanent row in the menu. Attribution: App Store campaign token (ct) and Play install referrer (utm_*), no personal data. Set enabled=false to stop everywhere without an app update.",
+  "_doc": "Cross-promotion between Spacerunners apps (owner's own apps only). Read by DomDom Pop, Vidalo and Sky Says. Rules: never a full-screen interstitial, never a reward for installing, only where the host app's age rating covers the promoted app (DomDom iOS 4+ never shows the 9+ Squeeze Out!), soft card at most once per softEveryDays after a positive moment, always dismissible, permanent row in the menu. Attribution: App Store campaign token (ct) and Play install referrer (utm_*), no personal data. Set enabled=false to stop everywhere without an app update. iOS hosts stay off until Squeeze Out! is live on the App Store (1.0.1 was still in review on 2026-10-14); then switch vidalo/skysays ios to true.",
   "version": 1,
   "campaigns": [
     {
@@ -11,14 +11,28 @@
       "cta": "Get it free",
       "icon": "https://denizozzgur.github.io/xpromo/squeezeout-icon.png",
       "image": "https://denizozzgur.github.io/xpromo/squeezeout-card.jpg",
-      "ios": { "appStoreId": "6818148630", "minHostAgeRating": 9 },
-      "android": { "package": "com.spacerunners.squeezeout" },
+      "ios": {
+        "appStoreId": "6818148630",
+        "minHostAgeRating": 9
+      },
+      "android": {
+        "package": "com.spacerunners.squeezeout"
+      },
       "softEveryDays": 7,
       "softAfterSessions": 3,
       "hosts": {
-        "domdom": { "ios": false, "android": true },
-        "vidalo": { "ios": true, "android": true },
-        "skysays": { "ios": true, "android": true }
+        "domdom": {
+          "ios": false,
+          "android": true
+        },
+        "vidalo": {
+          "ios": false,
+          "android": true
+        },
+        "skysays": {
+          "ios": false,
+          "android": true
+        }
       }
     }
   ]
